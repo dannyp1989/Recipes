@@ -13,7 +13,4 @@ export class RecipesComponent implements OnInit {
   ngOnInit() {
   }
 
-  toDetails(recipe: Recipe) {
-    this.recipeDet = recipe;
-  }
 }

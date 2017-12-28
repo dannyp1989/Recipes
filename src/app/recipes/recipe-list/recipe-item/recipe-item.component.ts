@@ -9,17 +9,15 @@ import { Recipe } from '../../recipe.model';
 export class RecipeItemComponent implements OnInit {
   @Input()
   recipe: Recipe;
-  @Input()
-  index: number;
   @Output()
-  recipeDetIndex = new EventEmitter<number>();
+  recipeDetIndex = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {
   }
 
   onRecipeClick(index: number) {
-    this.recipeDetIndex.emit(index);
+    this.recipeDetIndex.emit();
   }
 
 }
